@@ -1,0 +1,32 @@
+name: Vantage DMM bridge
+version: "1.0.0"
+slug: vantage_dmm_bridge
+description: Shows a LinkPlay player and the Music Assistant library in the Vantage Equinox app, as a Vantage DMM
+url: https://github.com/albertobucciero/vantage-dmm-bridge
+arch:
+  - aarch64
+  - amd64
+startup: application
+boot: auto
+init: false
+host_network: true
+homeassistant_api: true
+options:
+  player_host: ""
+  ma_player: ""
+  ma_url: "http://127.0.0.1:8095"
+  ma_token: ""
+  zone_names:
+    - "Network"
+    - "Zone 2"
+    - "Zone 3"
+    - "Zone 4"
+  diagnostics: false
+schema:
+  player_host: str
+  ma_player: str?
+  ma_url: str
+  ma_token: password?
+  zone_names:
+    - str
+  diagnostics: bool
